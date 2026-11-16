@@ -186,6 +186,8 @@ else()
     add_library(src ${SIM_SRC})
 endif()
 
+target_link_libraries(src ${SIM_DEPENDENCIES})
+
 # Link ROS dependencies if available
 if(ROS2_ENABLED)
     ament_target_dependencies(src
